@@ -65,6 +65,12 @@ public abstract class Conversation {
 
     public abstract String getConversationNameForUser(User user);
 
+    public String getConversationNameForUserName(String username) throws UserNotFoundException {
+        User user = User.getUser(username);
+        return getConversationNameForUser(user);
+    }
+
+
     public static String getUniqueKey(User creator, Date createdAt) {
         return creator.getName() + createdAt.toString();
     }
