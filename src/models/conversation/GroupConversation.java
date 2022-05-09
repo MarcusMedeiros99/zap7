@@ -44,6 +44,7 @@ public class GroupConversation extends Conversation {
         return this.name;
     }
 
+
     public void setName(String name) {
         this.name = name;
     }
@@ -77,5 +78,8 @@ public class GroupConversation extends Conversation {
         }
     }
 
+    public Set<String> getAdmins() {
+        return this.admins;
+    }
     
 }
